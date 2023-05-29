@@ -3,6 +3,7 @@ NETFLIX CLONE ON KUBERNETES KUBEADM :
 CMDS file in repo contains all the commands that are required to setup the Kubadm Kubernetes CLuster.
 
 Below are the Project Details of Netflix clone app:
+
 ----------------------------------------------------------------------------------------------------------
 # Netflix Clone
 
