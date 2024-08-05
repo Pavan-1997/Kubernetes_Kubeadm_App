@@ -2,8 +2,10 @@
 ----------------------------------------------------------------------------------------------
 
 
----------------------------------------- Kubeadm Installation ------------------------------------------ 
--------------------------------------- Both Master & Worker Node ---------------------------------------
+## Kubeadm Installation
+
+## Both Master & Worker Node 
+
 sudo apt update -y
 
 sudo apt install docker.io -y
@@ -21,7 +23,8 @@ sudo apt update -y
 sudo apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y
 ##To connect with cluster execute below commands on master node and worker node respectively
 
---------------------------------------------- Master Node -------------------------------------------------- 
+## Master Node
+
 sudo su
 
 kubeadm init
@@ -36,21 +39,22 @@ kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/we
 
 kubeadm token create --print-join-command
   
-------------------------------------------- Worker Node ------------------------------------------------ 
+## Worker Node
+
 sudo su
 
 kubeadm reset pre-flight checks
 
 kubeadm join 172.31.84.126:6443 --token tgjwkr.g82yv5bhqis7y1wy --discovery-token-ca-cert-hash sha256:edaa5c7fc8709972162afa849b67ffee94e0e74321142800b345c3de59a97c3d
 (The above token would be generated from the Master Server)
------> Paste the Join command on worker node and append `--v=5` at end
-#To verify cluster connection  
 
---------------------------------------- Master Node -----------------------------------------
+Paste the Join command on worker node and append `--v=5` at end To verify cluster connection  
+
+## On the Master Node 
 
 kubectl get nodes 
 
-
+---
 
 ![image](https://github.com/user-attachments/assets/a3b934c0-42c1-4f34-9914-46fe6ba0e81f)
 
