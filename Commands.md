@@ -49,3 +49,9 @@ kubeadm join 172.31.84.126:6443 --token tgjwkr.g82yv5bhqis7y1wy --discovery-toke
 --------------------------------------- Master Node -----------------------------------------
 
 kubectl get nodes 
+
+
+
+![image](https://github.com/user-attachments/assets/a3b934c0-42c1-4f34-9914-46fe6ba0e81f)
+
+
